@@ -1,13 +1,3 @@
-/*!
-
- @Title: Layui
- @Description：经典模块化前端框架
- @Site: www.layui.com
- @Author: 贤心
- @License：MIT
-
- */
- 
 ;!function(win){
   "use strict";
 
@@ -23,11 +13,7 @@
   }
 
   //获取layui所在目录
-  ,getPath = function(){
-    var js = doc.scripts
-    ,jsPath = js[js.length - 1].src;
-    return jsPath.substring(0, jsPath.lastIndexOf('/') + 1);
-  }()
+  ,getPath = __getCwd() + '/'
 
   //异常提示
   ,error = function(msg){
@@ -53,10 +39,6 @@
     ,flow: 'modules/flow' //流加载
     ,carousel: 'modules/carousel' //轮播
     ,code: 'modules/code' //代码修饰器
-    ,jquery: 'modules/jquery' //DOM库（第三方）
-    
-    ,mobile: 'modules/mobile' //移动大模块 | 若当前为开发目录，则为移动模块入口，否则为移动模块集合
-    ,'layui.all': '../layui.all' //PC模块合并版
   };
 
   //记录基础数据
@@ -133,14 +115,6 @@
       apps.length > 1 ?
         that.use(apps.slice(1), callback, exports)
       : ( typeof callback === 'function' && callback.apply(layui, exports) );
-    }
-    
-    //如果使用了 layui.all.js
-    if(apps.length === 0 
-    || (layui['layui.all'] && modules[item]) 
-    || (!layui['layui.all'] && layui['layui.mobile'] && modules[item])
-    ){
-      return onCallback(), that;
     }
 
     //首次加载模块
@@ -483,4 +457,3 @@
   win.layui = new Layui();
 
 }(window);
-
