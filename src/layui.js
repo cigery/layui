@@ -116,6 +116,11 @@
         that.use(apps.slice(1), callback, exports)
       : ( typeof callback === 'function' && callback.apply(layui, exports) );
     }
+    
+    //如果使用了 layui.all.js
+    if(apps.length === 0){
+      return onCallback(), that;
+    }
 
     //首次加载模块
     if(!config.modules[item]){
