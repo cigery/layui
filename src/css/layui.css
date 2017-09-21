@@ -568,7 +568,7 @@ a cite{font-style: normal; *cursor:pointer;}
 
 /* 数据表格 */
 .layui-table[lay-data]{display: none;}
-.layui-table-view{position: relative; margin: 10px 0; overflow: hidden;}
+.layui-table-view{position: relative;overflow: hidden;}
 .layui-table-view .layui-table{position: relative; width: auto; margin: 0;}
 .layui-table-view .layui-table[lay-skin="line"]{border-width: 0; border-right-width: 1px;}
 .layui-table-view .layui-table[lay-skin="row"]{border-width: 0; border-bottom-width: 1px;}
