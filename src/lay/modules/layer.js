@@ -851,9 +851,11 @@ layer.restore = function(index){
   }, true);
   layero.find('.layui-layer-max').removeClass('layui-layer-maxmin');
   layero.find('.layui-layer-min').show();
-  layero.attr('type') === 'page' && layero.find(doms[4]).show();
+  type === 'page' && layero.find(doms[4]).show();
   ready.rescollbar(index);
-  layero.find('iframe').height(parseFloat(area[1]));
+  if(type === 'iframe'){
+    layero.find('iframe').height(parseFloat(area[1]));
+  }
 };
 
 //全屏
@@ -873,7 +875,9 @@ layer.full = function(index){
       height: win.height()
     }, true);
     layero.find('.layui-layer-min').hide();
-    layero.find('iframe').height(win.height());
+    if(layero.attr('type') === 'iframe'){
+      layero.find('iframe').height(win.height());
+    }
   }, 100);
 };
 
