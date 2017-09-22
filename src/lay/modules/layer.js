@@ -1,12 +1,3 @@
-﻿/**
-
- @Name：layer v3.1.0 Web弹层组件
- @Author：贤心
- @Site：http://layer.layui.com
- @License：MIT
-    
- */
-
 ;!function(window, undefined){
 "use strict";
 
@@ -862,6 +853,7 @@ layer.restore = function(index){
   layero.find('.layui-layer-min').show();
   layero.attr('type') === 'page' && layero.find(doms[4]).show();
   ready.rescollbar(index);
+  layero.find('iframe').height(parseFloat(area[1]));
 };
 
 //全屏
@@ -881,6 +873,7 @@ layer.full = function(index){
       height: win.height()
     }, true);
     layero.find('.layui-layer-min').hide();
+    layero.find('iframe').height(win.height());
   }, 100);
 };
 
