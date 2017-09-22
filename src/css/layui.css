@@ -1,34 +1,7 @@
-/**
- 
- @Name: layui
- @Author: 贤心
- @Site: www.layui.com
- 
- */
-
-
-/** 初始化 **/
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,textarea,p,blockquote,th,td,form,pre{margin: 0; padding: 0; -webkit-tap-highlight-color:rgba(0,0,0,0);}
-a:active,a:hover{outline:0}
-img{display: inline-block; border: none; vertical-align: middle;}
-li{list-style:none;}
-table{border-collapse: collapse; border-spacing: 0;}
-h1,h2,h3{font-size: 14px; font-weight: 400;}
-h4, h5, h6{font-size: 100%; font-weight: 400;}
-button,input,select,textarea{font-size: 100%; }
-input,button,textarea,select,optgroup,option{font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; outline: 0;}
-pre{white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;}
-
-
 /** 图标字体 **/
 @font-face {font-family: 'layui-icon';
-  src: url('../font/iconfont.eot?v=213');
-  src: url('../font/iconfont.eot?v=213#iefix') format('embedded-opentype'),
-  url('../font/iconfont.svg?v=213#iconfont') format('svg'),
-  url('../font/iconfont.woff?v=213') format('woff'),
-  url('../font/iconfont.ttf?v=213') format('truetype');
+  src: url('../font/iconfont.woff?v=213') format('woff');
 }
-                    
 .layui-icon{
   font-family:"layui-icon" !important;
   font-size: 16px;
@@ -38,12 +11,7 @@ pre{white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; w
 }
 
 /** 初始化全局标签 **/
-body{line-height: 24px; font: 14px Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;}
-hr{height: 1px; margin: 10px 0; border: 0; background-color: #e2e2e2; clear: both;}
-a{color: #333; text-decoration:none; }
-a:hover{color: #777;}
 a cite{font-style: normal; *cursor:pointer;}
-
 /** 基础通用 **/
 .layui-border-box, .layui-border-box *{box-sizing: border-box;}
 /* 消除第三方ui可能造成的冲突 */.layui-box, .layui-box *{box-sizing: content-box;}
@@ -77,9 +45,6 @@ a cite{font-style: normal; *cursor:pointer;}
 .layui-layout-admin .layui-header .layui-nav{background: none;}
 .layui-layout-left{position: absolute !important; left: 200px; top: 0;}
 .layui-layout-right{position: absolute !important; right: 0; top: 0;}
-
-/* 响应式类 */
-
 
 /* 栅格布局 */
 .layui-container{position: relative; margin: 0 auto; padding: 0 15px; box-sizing: border-box;}
@@ -592,6 +557,8 @@ a cite{font-style: normal; *cursor:pointer;}
 .laytable-cell-space{width: 15px; padding: 0; text-align: center;}
 
 .layui-table-body{position: relative; overflow: auto; margin-right: -1px; margin-bottom: -1px;}
+.layui-table-body::-webkit-scrollbar {width:7px;background:#f3f3f3;}
+.layui-table-body::-webkit-scrollbar-thumb {background:#dcdcdc;} 
 .layui-table-body .layui-none{line-height: 40px; text-align: center; color: #999;}
 .layui-table-fixed{position: absolute; left: 0; top: 0;}
 .layui-table-fixed .layui-table-body{overflow: hidden;}
@@ -944,6 +911,3 @@ body .layui-util-face  .layui-layer-content{padding:0; background-color:#fff; co
   100% {opacity: 0;}
 }
 .layui-anim-fadeout{-webkit-animation-name: layui-fadeout; animation-name: layui-fadeout}
-
-
-
