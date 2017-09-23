@@ -1,13 +1,4 @@
-/**
- 
- @Name: layer
- @Author: 贤心
- 
- **/
-
-/* *html{background-image: url(about:blank); background-attachment: fixed;} */
 html #layuicss-layer{display: none; position: absolute; width: 1989px;}
-
 /* common */
 .layui-layer-shade, .layui-layer{position:fixed; _position:absolute; pointer-events: auto;}
 .layui-layer-shade{top:0; left:0; width:100%; height:100%; _height:expression(document.body.offsetHeight+"px");}
@@ -17,11 +8,11 @@ html #layuicss-layer{display: none; position: absolute; width: 1989px;}
 .layui-layer-content{position:relative;}
 .layui-layer-border{border: 1px solid #B2B2B2; border: 1px solid rgba(0,0,0,.1); box-shadow: 1px 1px 5px rgba(0,0,0,.2);}
 .layui-layer-load{background:url(loading-1.gif) #eee center center no-repeat;}
-.layui-layer-ico{ background:url(icon.png) no-repeat;}
+.layui-layer-ico{background:url(icon.png) no-repeat;}
+.layui-layer-ico:before {font-family:"iconfont"!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;user-select:none;}
 .layui-layer-dialog .layui-layer-ico,
 .layui-layer-setwin a,
 .layui-layer-btn a{display:inline-block; *display:inline; *zoom:1; vertical-align:top;}
-
 .layui-layer-move{display: none; position: fixed; *position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; filter:alpha(opacity=0); background-color: #fff; z-index: 2147483647;}
 .layui-layer-resize{position: absolute; width: 15px; height: 15px; right: 0; bottom: 0; cursor: se-resize;}
 
@@ -29,12 +20,12 @@ html #layuicss-layer{display: none; position: absolute; width: 1989px;}
 .layer-anim{-webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-duration:.3s; animation-duration:.3s;}
 
 @-webkit-keyframes layer-bounceIn { /* 默认 */
-	0% {opacity: 0; -webkit-transform: scale(.5); transform: scale(.5)}
-	100% {opacity: 1; -webkit-transform: scale(1); transform: scale(1)}
+    0% {opacity: 0; -webkit-transform: scale(.5); transform: scale(.5)}
+    100% {opacity: 1; -webkit-transform: scale(1); transform: scale(1)}
 }
 @keyframes layer-bounceIn {
-	0% {opacity: 0; -webkit-transform: scale(.5); -ms-transform: scale(.5); transform: scale(.5)}
-	100% {opacity: 1; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1)}
+    0% {opacity: 0; -webkit-transform: scale(.5); -ms-transform: scale(.5); transform: scale(.5)}
+    100% {opacity: 1; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1)}
 }
 .layer-anim-00{-webkit-animation-name: layer-bounceIn;animation-name: layer-bounceIn}
 
@@ -56,10 +47,11 @@ html #layuicss-layer{display: none; position: absolute; width: 1989px;}
 .layui-layer-setwin a{position:relative; width: 16px; height:16px; margin-left:10px; font-size:12px; _overflow:hidden;}
 .layui-layer-setwin .layui-layer-min cite{position:absolute; width:14px; height:2px; left:0; top:50%; margin-top:-1px; background-color:#2E2D3C; cursor:pointer; _overflow:hidden;}
 .layui-layer-setwin .layui-layer-min:hover cite{background-color:#2D93CA; }
-.layui-layer-setwin .layui-layer-max{background-position:-32px -40px;}
-.layui-layer-setwin .layui-layer-max:hover{background-position:-16px -40px;}
-.layui-layer-setwin .layui-layer-maxmin{background-position:-65px -40px;}
-.layui-layer-setwin .layui-layer-maxmin:hover{background-position:-49px -40px;}
+.layui-layer-setwin .layui-layer-max, .layui-layer-setwin .layui-layer-maxmin {background:none;}
+.layui-layer-setwin .layui-layer-max:before {content:'\e7a0';}
+.layui-layer-setwin .layui-layer-max:hover {color:#499ef3;}
+.layui-layer-setwin .layui-layer-maxmin:before {content:'\e694';}
+.layui-layer-setwin .layui-layer-maxmin:hover {color:#499ef3;}
 .layui-layer-setwin .layui-layer-close1{background-position: 1px -40px; cursor: pointer;}
 .layui-layer-setwin .layui-layer-close1:hover{opacity:0.7;}
 .layui-layer-setwin .layui-layer-close2{position:absolute; right:-28px; top:-28px; width:30px; height:30px;  margin-left:0; background-position:-149px -31px; *right:-18px; _display:none;}
@@ -177,5 +169,3 @@ html #layuicss-layer{display: none; position: absolute; width: 1989px;}
 @media screen and (max-width: 1100px) {
   .layui-layer-iframe{overflow-y: auto; -webkit-overflow-scrolling: touch;}
 }
-
-
